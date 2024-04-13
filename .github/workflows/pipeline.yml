@@ -51,4 +51,12 @@ jobs:
     - name: Run the ui tests
       run: npm run test:ui
     
-  
+  Deploy:
+    runs-on: ubuntu-latest
+    needs: run-ui-tests
+    steps:
+      - name: Deploy to production
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.YRach361_Cookbook_SERVICE_ID }}
+          api-key: ${{ secrets.YRach361_Cookbook_API_KEY }}
