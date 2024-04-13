@@ -32,7 +32,7 @@ jobs:
       run: echo "Y.Rach361"
 
   Run_Cookbook_UI-Tests:
-    needs: build_cookbook_unit-tests
+    needs: Build_Cookbook_Unit-Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -53,7 +53,7 @@ jobs:
     
   Deploy:
     runs-on: ubuntu-latest
-    needs: run-ui-tests
+    needs: Run_Cookbook_UI-Tests
     steps:
       - name: Deploy to production
         uses: JorgeLNJunior/render-deploy@v1.4.4
