@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build_cookbook_unit-tests:
+  Build_Cookbook_Unit-Tests:
 
     runs-on: ubuntu-latest
 
@@ -31,7 +31,7 @@ jobs:
     - name: Display Softuni Username
       run: echo "Y.Rach361"
 
-  run-ui-tests:
+  Run_Cookbook_UI-Tests:
     needs: build_cookbook_unit-tests
     runs-on: ubuntu-latest
 
