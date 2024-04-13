@@ -24,6 +24,8 @@ jobs:
         cache: 'npm'
     - name:  Install NPM dependencies
       run: npm install
+    - name: Start tje Cookbook App
+      run: npm run start &
     - name: Run the unit tests
       run: npm run test:unit
     - name: Display Softuni Username
